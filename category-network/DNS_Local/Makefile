@@ -1,5 +1,5 @@
 
-LAB    = XSS_Lab
+LAB    = DNS_Local
 LABPDF = $(LAB).pdf
 
 

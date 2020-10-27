@@ -1,7 +1,6 @@
 
-LAB    = XSS_Lab
+LAB    = DNS_Remote
 LABPDF = $(LAB).pdf
-
 
 all: $(LABPDF)
 
@@ -9,6 +8,15 @@ all: $(LABPDF)
 %.pdf: %.tex
 	pdflatex $<
 	pdflatex $<
+
+
+bib: $(LAB)
+
+$(LAB):
+	pdflatex $@.tex
+	bibtex $@
+	pdflatex $@.tex
+	pdflatex $@.tex
 
 
 clean:
